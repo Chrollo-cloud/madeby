@@ -1,0 +1,105 @@
+.payment-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.42fr);
+  gap: clamp(28px, 6vw, 88px);
+  padding-top: 48px;
+}
+
+.payment-options {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.payment-options h2 {
+  font-size: clamp(38px, 5vw, 62px);
+  margin-bottom: 11px;
+}
+
+.payment-options label {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  padding: 18px;
+  cursor: pointer;
+}
+
+.payment-options label.selected {
+  border-color: var(--text);
+  background: var(--yellow);
+  box-shadow: 3px 3px 0 var(--text);
+}
+
+.payment-options input {
+  accent-color: var(--red);
+  margin-top: 3px;
+}
+
+.payment-options label span {
+  display: grid;
+  gap: 5px;
+}
+
+.payment-options label b {
+  font-size: 17px;
+  letter-spacing: -0.04em;
+}
+
+.payment-options label small,
+.payment-note {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.payment-options .button {
+  margin-top: 14px;
+  justify-self: start;
+}
+
+.payment-note {
+  margin: 0;
+}
+
+.payment-success {
+  max-width: 640px;
+  padding: 120px 0;
+  text-align: center;
+  margin: auto;
+}
+
+.payment-success > span {
+  color: var(--red);
+  font-size: 52px;
+}
+
+.payment-success h1 {
+  font-size: clamp(66px, 11vw, 130px);
+  line-height: 0.8;
+  letter-spacing: -0.1em;
+  margin: 22px 0;
+}
+
+.payment-success h1 i {
+  font-family: "Playfair Display", serif;
+}
+
+.payment-success > p:last-of-type {
+  max-width: 340px;
+  color: var(--muted);
+  margin: 0 auto 30px;
+  line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+  .payment-layout {
+    grid-template-columns: 1fr;
+    padding-top: 30px;
+  }
+
+  .payment-success {
+    padding: 80px 0;
+  }
+}

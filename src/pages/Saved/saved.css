@@ -1,0 +1,26 @@
+.saved-header {
+  padding: 94px 0 58px;
+  border-bottom: 1px solid var(--line);
+}
+.saved h1 {
+  font-size: clamp(70px, 11vw, 150px);
+  margin: 28px 0 25px;
+}
+.saved-header > p:last-child {
+  font:
+    18px "Playfair Display",
+    serif;
+  color: var(--muted);
+  margin: 0;
+}
+.saved .product-grid {
+  padding-top: 0;
+}
+@media (max-width: 700px) {
+  .saved-header {
+    padding: 55px 0 42px;
+  }
+  .saved h1 {
+    font-size: 22vw;
+  }
+}

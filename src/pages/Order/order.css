@@ -1,0 +1,146 @@
+.order-header {
+  padding: 92px 0 50px;
+  text-align: center;
+}
+
+.order-header h1,
+.order-success h1 {
+  font-size: clamp(70px, 12vw, 158px);
+  line-height: 0.75;
+  letter-spacing: -0.11em;
+  margin: 27px 0;
+}
+
+.order-header h1 i,
+.order-success h1 i {
+  font-family: "Playfair Display", serif;
+}
+
+.order-header > p:last-child {
+  color: var(--muted);
+  margin: 0;
+  font: 18px "Playfair Display", serif;
+}
+
+.order-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.42fr);
+  gap: clamp(28px, 6vw, 88px);
+  align-items: start;
+}
+
+.order-details {
+  display: grid;
+  gap: 26px;
+  align-content: start;
+}
+
+.order-number {
+  display: grid;
+  gap: 7px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid var(--text);
+}
+
+.order-number span,
+.order-status dt {
+  color: var(--muted);
+  font: 10px "DM Mono", monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.order-number strong {
+  font: 500 clamp(26px, 4vw, 42px) "DM Mono", monospace;
+  letter-spacing: -0.07em;
+}
+
+.order-status {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 0;
+}
+
+.order-status div {
+  display: grid;
+  gap: 7px;
+}
+
+.order-status dd {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.order-status .paid-status {
+  color: var(--text);
+  background: var(--lime);
+  border: 1px solid var(--text);
+  box-shadow: 2px 2px 0 var(--text);
+  display: table;
+  padding: 3px 5px;
+  font: 10px "DM Mono", monospace;
+}
+
+.order-address {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.order-address b {
+  color: var(--text);
+}
+
+.order-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+}
+
+.order-success {
+  display: grid;
+  min-height: 76vh;
+  place-items: center;
+  text-align: center;
+}
+
+.order-success section {
+  max-width: 580px;
+}
+
+.order-success section > span {
+  color: var(--red);
+  font-size: 52px;
+}
+
+.order-success > section > p:not(.eyebrow) {
+  color: var(--muted);
+  margin: 0 auto 12px;
+  font: 20px "Playfair Display", serif;
+}
+
+.order-success .order-success-note {
+  max-width: 320px;
+  margin-bottom: 30px;
+  font: 13px/1.5 "DM Sans", sans-serif;
+}
+
+@media (max-width: 760px) {
+  .order-header {
+    padding: 65px 0 44px;
+  }
+
+  .order-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .order-status {
+    grid-template-columns: 1fr;
+  }
+
+  .order-success {
+    min-height: 65vh;
+  }
+}

@@ -1,0 +1,68 @@
+.checkout-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.42fr);
+  gap: clamp(28px, 6vw, 88px);
+  padding-top: 48px;
+}
+
+.checkout-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  align-content: start;
+}
+
+.checkout-form h2,
+.checkout-form-wide {
+  grid-column: 1 / -1;
+}
+
+.checkout-form h2 {
+  font-size: clamp(38px, 5vw, 62px);
+  margin-bottom: 8px;
+}
+
+.checkout-form label {
+  display: grid;
+  gap: 7px;
+  font: 10px "DM Mono", monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+  min-height: 45px;
+  border: 1px solid var(--text);
+  border-radius: 0;
+  background: #fffaf2;
+  color: var(--text);
+  padding: 11px;
+  resize: vertical;
+}
+
+.checkout-form textarea {
+  min-height: 112px;
+}
+
+.checkout-form .button {
+  margin-top: 4px;
+}
+
+@media (max-width: 760px) {
+  .checkout-layout {
+    grid-template-columns: 1fr;
+    padding-top: 30px;
+  }
+}
+
+@media (max-width: 520px) {
+  .checkout-form {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-form h2,
+  .checkout-form-wide {
+    grid-column: auto;
+  }
+}

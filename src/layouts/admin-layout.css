@@ -1,0 +1,162 @@
+.admin-layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.admin-sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 22px;
+  background: var(--text);
+  color: var(--bg);
+}
+
+.admin-sidebar-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.admin-brand {
+  display: grid;
+  gap: 3px;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.08em;
+}
+
+.admin-brand span {
+  color: var(--yellow);
+  font:
+    10px "DM Mono",
+    monospace;
+  letter-spacing: 0.16em;
+}
+
+.admin-sidebar nav {
+  display: grid;
+  gap: 6px;
+  margin-top: 68px;
+}
+
+.admin-sidebar nav a {
+  padding: 11px 0;
+  border-bottom: 1px solid rgba(247, 241, 232, 0.28);
+  font:
+    11px "DM Mono",
+    monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.admin-sidebar nav a.active,
+.admin-sidebar nav a:hover {
+  color: var(--yellow);
+}
+
+.admin-marketplace-link {
+  margin-top: auto;
+  color: var(--pink);
+  font:
+    11px "DM Mono",
+    monospace;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.admin-close-button,
+.admin-menu-button {
+  border: 1px solid currentColor;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  padding: 6px 9px;
+  font:
+    10px "DM Mono",
+    monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.admin-close-button {
+  display: none;
+}
+
+.admin-main {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.admin-mobile-header {
+  display: none;
+}
+
+.admin-footer {
+  margin-top: auto;
+  padding: 24px 42px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font:
+    10px "DM Mono",
+    monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.admin-scrim {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .admin-layout {
+    display: block;
+  }
+
+  .admin-sidebar {
+    position: fixed;
+    z-index: 20;
+    width: min(280px, 86vw);
+    transform: translateX(-105%);
+    transition: transform 0.25s ease;
+  }
+
+  .admin-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .admin-close-button,
+  .admin-mobile-header {
+    display: flex;
+  }
+
+  .admin-mobile-header {
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--line);
+    font:
+      10px "DM Mono",
+      monospace;
+    letter-spacing: 0.08em;
+  }
+
+  .admin-scrim {
+    position: fixed;
+    z-index: 10;
+    inset: 0;
+    display: block;
+    border: 0;
+    background: rgba(23, 60, 47, 0.35);
+  }
+
+  .admin-footer {
+    padding: 22px 18px;
+  }
+}

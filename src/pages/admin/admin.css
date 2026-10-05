@@ -1,0 +1,208 @@
+.admin-page {
+  width: min(1180px, 100%);
+  padding: 62px 42px 100px;
+}
+
+.admin-page-header {
+  position: relative;
+  padding-bottom: 45px;
+  border-bottom: 1px solid var(--line);
+}
+
+.admin-page-header::after {
+  content: "✦";
+  position: absolute;
+  right: 4%;
+  top: 4px;
+  color: var(--red);
+  font-size: clamp(56px, 8vw, 96px);
+  transform: rotate(14deg);
+}
+
+.admin-page-header h1 {
+  margin: 23px 0 16px;
+  font-size: clamp(64px, 9vw, 118px);
+  letter-spacing: -0.1em;
+  line-height: 0.78;
+}
+
+.admin-page-header h1 span {
+  color: var(--red);
+}
+
+.admin-page-header > p:last-child {
+  max-width: 370px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.admin-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 35px 0 80px;
+}
+
+.admin-stat {
+  min-height: 135px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  border: 1px solid var(--text);
+  box-shadow: 4px 4px 0 var(--text);
+}
+
+.admin-stat.yellow {
+  background: var(--yellow);
+}
+
+.admin-stat.pink {
+  background: var(--pink);
+}
+
+.admin-stat.blue {
+  background: var(--blue);
+}
+
+.admin-stat.lime {
+  background: var(--lime);
+}
+
+.admin-stat span {
+  font:
+    10px "DM Mono",
+    monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.admin-stat strong {
+  font-size: clamp(42px, 5vw, 68px);
+  letter-spacing: -0.09em;
+  line-height: 0.8;
+}
+
+.admin-section-heading h2,
+.admin-about-card h2 {
+  margin: 9px 0 25px;
+  font-size: clamp(36px, 5vw, 64px);
+  letter-spacing: -0.07em;
+  line-height: 0.9;
+}
+
+.admin-listing-table {
+  border-top: 1px solid var(--text);
+}
+
+.admin-listing-row {
+  display: grid;
+  grid-template-columns: 68px minmax(160px, 1fr) 115px 110px 130px;
+  gap: 16px;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.admin-listing-row img {
+  width: 68px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 1px solid var(--text);
+}
+
+.admin-listing-row h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  letter-spacing: -0.03em;
+}
+
+.admin-listing-row p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.admin-type,
+.admin-category,
+.admin-listing-row strong {
+  font:
+    10px "DM Mono",
+    monospace;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.admin-type {
+  color: var(--burgundy);
+}
+
+.admin-about-card {
+  max-width: 760px;
+  padding: 34px;
+  margin-top: 45px;
+  background: var(--panel);
+  border: 1px solid var(--text);
+  box-shadow: 7px 7px 0 var(--pink);
+}
+
+.admin-about-card p:last-child {
+  max-width: 600px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.admin-tech {
+  margin-top: 70px;
+}
+
+.admin-tech > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 17px;
+}
+
+.admin-tech span {
+  padding: 9px 11px;
+  background: var(--yellow);
+  border: 1px solid var(--text);
+  box-shadow: 2px 2px 0 var(--text);
+  font:
+    10px "DM Mono",
+    monospace;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 760px) {
+  .admin-page {
+    padding: 47px 18px 75px;
+  }
+
+  .admin-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-bottom: 60px;
+  }
+
+  .admin-listing-row {
+    grid-template-columns: 56px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .admin-listing-row img {
+    width: 56px;
+  }
+
+  .admin-type,
+  .admin-category,
+  .admin-listing-row strong {
+    grid-column: 2;
+  }
+
+  .admin-about-card {
+    padding: 24px;
+  }
+}

@@ -1,0 +1,91 @@
+.order-summary {
+  align-self: start;
+  border: 1px solid var(--text);
+  background: var(--panel);
+  box-shadow: 5px 5px 0 var(--yellow);
+  padding: 24px;
+}
+
+.order-summary h2 {
+  font-size: clamp(34px, 4vw, 52px);
+  margin-bottom: 24px;
+}
+
+.order-summary-items {
+  display: grid;
+  gap: 14px;
+}
+
+.order-summary-item {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 11px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.order-summary-item img {
+  width: 52px;
+  height: 60px;
+  border: 1px solid var(--text);
+}
+
+.order-summary-item h3,
+.order-summary-item p {
+  margin: 0;
+}
+
+.order-summary-item h3 {
+  font-size: 14px;
+  letter-spacing: -0.03em;
+}
+
+.order-summary-item p,
+.order-summary-item strong,
+.order-totals {
+  font: 10px "DM Mono", monospace;
+}
+
+.order-summary-item p {
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.order-summary-item strong {
+  white-space: nowrap;
+}
+
+.order-totals {
+  display: grid;
+  gap: 10px;
+  margin: 19px 0 0;
+}
+
+.order-totals div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.order-totals dt,
+.order-totals dd {
+  margin: 0;
+}
+
+.order-totals dd {
+  font-weight: 700;
+}
+
+.order-totals .order-total {
+  margin-top: 5px;
+  padding-top: 14px;
+  border-top: 1px solid var(--text);
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  .order-summary {
+    padding: 19px;
+  }
+}
