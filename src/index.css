@@ -19,6 +19,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
   background: var(--bg);
@@ -30,13 +31,19 @@ body {
   );
   background-size: 7px 7px;
 }
+
+#root {
+  min-width: 0;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 button,
 input,
-select {
+select,
+textarea {
   font: inherit;
 }
 button {
@@ -53,6 +60,12 @@ img {
   display: block;
   max-width: 100%;
   object-fit: cover;
+}
+
+.page,
+.nav,
+.footer {
+  min-width: 0;
 }
 .page {
   max-width: 1380px;
@@ -401,6 +414,7 @@ h1 i {
   }
   .footer small {
     grid-column: auto;
+    overflow-wrap: anywhere;
   }
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -415,10 +429,21 @@ h1 i {
     margin-top: 5px;
   }
   .section-title {
+    align-items: flex-start;
+    gap: 18px;
+    flex-direction: column;
     margin-bottom: 25px;
   }
   .section-title h2 {
     font-size: 47px;
+  }
+
+  .empty-state {
+    padding: 70px 15px;
+  }
+
+  .empty-state h2 {
+    font-size: 38px;
   }
 }
 .product-image {

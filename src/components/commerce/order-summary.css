@@ -1,5 +1,6 @@
 .order-summary {
   align-self: start;
+  min-width: 0;
   border: 1px solid var(--text);
   background: var(--panel);
   box-shadow: 5px 5px 0 var(--yellow);
@@ -39,12 +40,15 @@
 .order-summary-item h3 {
   font-size: 14px;
   letter-spacing: -0.03em;
+  overflow-wrap: anywhere;
 }
 
 .order-summary-item p,
 .order-summary-item strong,
 .order-totals {
-  font: 10px "DM Mono", monospace;
+  font:
+    10px "DM Mono",
+    monospace;
 }
 
 .order-summary-item p {

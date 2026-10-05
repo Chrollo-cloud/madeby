@@ -5,6 +5,10 @@
   padding-top: 48px;
 }
 
+.mobile-line-break {
+  display: none;
+}
+
 .payment-options {
   display: grid;
   gap: 12px;
@@ -94,6 +98,10 @@
 }
 
 @media (max-width: 760px) {
+  .mobile-line-break {
+    display: block;
+  }
+
   .payment-layout {
     grid-template-columns: 1fr;
     padding-top: 30px;

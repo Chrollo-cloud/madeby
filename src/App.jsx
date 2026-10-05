@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import MainLayout from "./components/layout/MainLayout";
+import ScrollToTop from "./components/layout/ScrollToTop";
 import AdminLayout from "./layouts/AdminLayout";
 import Home from "./pages/Home/Home";
 import Explore from "./pages/Explore/Explore";
@@ -37,13 +38,16 @@ function MarketplaceRoutes() {
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/admin" element={<AdminLayout />}>
-        <Route index element={<Navigate to="dashboard" replace />} />
-        <Route path="dashboard" element={<AdminDashboard />} />
-        <Route path="about" element={<AboutPage />} />
-      </Route>
-      <Route path="*" element={<MarketplaceRoutes />} />
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<Navigate to="dashboard" replace />} />
+          <Route path="dashboard" element={<AdminDashboard />} />
+          <Route path="about" element={<AboutPage />} />
+        </Route>
+        <Route path="*" element={<MarketplaceRoutes />} />
+      </Routes>
+    </>
   );
 }

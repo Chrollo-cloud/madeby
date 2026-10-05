@@ -78,7 +78,8 @@ export default function Payment() {
       <header className="commerce-header">
         <p className="eyebrow">Step 02 / Payment</p>
         <h1>
-          Pay your way<span>.</span>
+          Pay your
+          <br className="mobile-line-break" /> way<span>.</span>
         </h1>
         <p>Choose a mock payment method for this prototype.</p>
       </header>

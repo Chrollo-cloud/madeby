@@ -178,7 +178,7 @@
     padding: 55px 0 40px;
   }
   .page-header h1 {
-    font-size: 25vw;
+    font-size: clamp(62px, 22vw, 92px);
   }
   .page-header > p:last-child {
     position: static;

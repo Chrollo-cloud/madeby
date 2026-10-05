@@ -21,6 +21,10 @@
     padding: 55px 0 42px;
   }
   .saved h1 {
-    font-size: 22vw;
+    font-size: clamp(54px, 18vw, 76px);
+  }
+
+  .saved h1 i {
+    display: block;
   }
 }

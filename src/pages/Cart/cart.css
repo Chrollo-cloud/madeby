@@ -16,7 +16,9 @@
 
 .commerce-header > p:last-child {
   color: var(--muted);
-  font: 18px "Playfair Display", serif;
+  font:
+    18px "Playfair Display",
+    serif;
   margin: 0;
 }
 
@@ -47,7 +49,9 @@
 }
 
 .cart-item-copy h2 {
-  font: 600 clamp(21px, 3vw, 31px) "DM Sans", sans-serif;
+  font:
+    600 clamp(21px, 3vw, 31px) "DM Sans",
+    sans-serif;
   letter-spacing: -0.06em;
   margin: 9px 0 6px;
 }
@@ -60,7 +64,9 @@
 
 .cart-item-copy > strong,
 .cart-item-actions > strong {
-  font: 500 12px "DM Mono", monospace;
+  font:
+    500 12px "DM Mono",
+    monospace;
 }
 
 .cart-item-actions {
@@ -84,7 +90,9 @@
   border: 0;
   background: transparent;
   color: var(--text);
-  font: 15px "DM Mono", monospace;
+  font:
+    15px "DM Mono",
+    monospace;
 }
 
 .quantity-control button:first-child {
@@ -105,7 +113,9 @@
   background: transparent;
   color: var(--text);
   padding: 0 0 3px;
-  font: 10px "DM Mono", monospace;
+  font:
+    10px "DM Mono",
+    monospace;
   text-transform: uppercase;
 }
 
@@ -156,5 +166,19 @@
 
   .cart-item-actions > strong {
     text-align: right;
+  }
+}
+
+@media (max-width: 420px) {
+  .cart-item-actions {
+    grid-template-columns: auto 1fr;
+  }
+
+  .cart-item-actions > strong {
+    justify-self: end;
+  }
+
+  .remove-item {
+    grid-column: 1 / -1;
   }
 }

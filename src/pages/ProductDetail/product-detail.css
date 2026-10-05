@@ -16,6 +16,10 @@
   gap: clamp(35px, 7vw, 115px);
   align-items: start;
 }
+
+.detail-top > div {
+  min-width: 0;
+}
 .detail-image {
   position: relative;
   aspect-ratio: 1/1.1;
@@ -245,6 +249,8 @@
 .detail-gallery {
   display: flex;
   gap: 8px;
+  min-width: 0;
+  max-width: 100%;
   margin-top: 14px;
   overflow: auto;
   padding: 2px;
