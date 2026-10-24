@@ -1,9 +1,9 @@
-import { products } from "../../data/products";
-import { creators } from "../../data/creators";
+import { useCatalogue } from "../../context/CatalogueContext";
 import { formatPrice } from "../../utils/formatPrice";
 import "./admin.css";
 
 export default function AdminDashboard() {
+  const { products, creators } = useCatalogue();
   const readyMade = products.filter((product) => product.type === "product");
   const commissions = products.filter(
     (product) => product.type === "commission",

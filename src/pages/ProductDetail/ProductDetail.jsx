@@ -1,7 +1,6 @@
+import { useCatalogue } from "../../context/CatalogueContext";
 import { Link, useParams } from "react-router-dom";
 import { useState } from "react";
-import { products } from "../../data/products";
-import { creators } from "../../data/creators";
 import { formatPrice } from "../../utils/formatPrice";
 import { useMarketplace } from "../../hooks/useMarketplace";
 import SaveButton from "../../components/product/SaveButton";
@@ -13,6 +12,7 @@ import EmptyState from "../../components/ui/EmptyState";
 import "./product-detail.css";
 
 export default function ProductDetail() {
+  const { products, creators } = useCatalogue();
   const { id } = useParams();
   const product = products.find((item) => item.id === id);
   const [added, setAdded] = useState(false);

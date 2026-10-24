@@ -1,6 +1,5 @@
+import { useCatalogue } from "../../context/CatalogueContext";
 import { useMemo, useState } from "react";
-import { products } from "../../data/products";
-import { creators } from "../../data/creators";
 import { categories } from "../../data/categories";
 import ProductGrid from "../../components/product/ProductGrid";
 import SearchBar from "../../components/filter/SearchBar";
@@ -9,6 +8,7 @@ import EmptyState from "../../components/ui/EmptyState";
 import "./explore.css";
 
 export default function Explore() {
+  const { products, creators } = useCatalogue();
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("ALL");
   const [listingType, setListingType] = useState("ALL");
@@ -41,7 +41,7 @@ export default function Explore() {
               ? (b.price ?? b.priceFrom) - (a.price ?? a.priceFrom)
               : b.rating - a.rating,
         ),
-    [search, category, listingType, sort],
+    [products, creators, search, category, listingType, sort],
   );
   return (
     <div className="explore page">

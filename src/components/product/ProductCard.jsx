@@ -1,11 +1,12 @@
+import { useCatalogue } from "../../context/CatalogueContext";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import SaveButton from "./SaveButton";
 import ProductBadge from "./ProductBadge";
-import { creators } from "../../data/creators";
 import { formatPrice } from "../../utils/formatPrice";
 
 export default function ProductCard({ product }) {
+  const { creators } = useCatalogue();
   const creator = creators.find((item) => item.id === product.creatorId);
   const images = product.images?.length ? product.images : [product.image];
   const [imageIndex, setImageIndex] = useState(0);

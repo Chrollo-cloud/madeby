@@ -1,6 +1,5 @@
+import { useCatalogue } from "../../context/CatalogueContext";
 import { Link } from "react-router-dom";
-import { products } from "../../data/products";
-import { creators } from "../../data/creators";
 import ProductGrid from "../../components/product/ProductGrid";
 import CreatorCard from "../../components/creator/CreatorCard";
 import SectionTitle from "../../components/ui/SectionTitle";
@@ -8,6 +7,7 @@ import Button from "../../components/ui/Button";
 import "./home.css";
 
 export default function Home() {
+  const { products, creators } = useCatalogue();
   const readyMade = products
     .filter((product) => product.type === "product")
     .slice(0, 4);

@@ -1,13 +1,13 @@
+import { useCatalogue } from "../../context/CatalogueContext";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
-import { creators } from "../../data/creators";
-import { products } from "../../data/products";
 import ProductGrid from "../../components/product/ProductGrid";
 import Button from "../../components/ui/Button";
 import EmptyState from "../../components/ui/EmptyState";
 import "./creator.css";
 
 export default function Creator() {
+  const { products, creators } = useCatalogue();
   const { id } = useParams();
   const creator = creators.find((item) => item.id === id);
   const [following, setFollowing] = useState(false);
