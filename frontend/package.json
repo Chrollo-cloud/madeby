@@ -1,0 +1,24 @@
+{
+  "name": "madeby-marketplace",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.105.1",
+    "@vitejs/plugin-react": "latest",
+    "axios": "^1.21.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-hot-toast": "^2.6.1",
+    "react-router-dom": "latest",
+    "vite": "^8.3.5"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.9"
+  }
+}
